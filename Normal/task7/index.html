@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p onclick="changeColor(event)">Текст</p>
+
+</body>
+<script>
+  function randomColor() {
+    return Math.round(Math.random() * 255);
+  }
+
+  function changeColor(event) {
+    event.target.closest("p").style.color = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+  }
+</script>
+</html>
