@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" onkeypress="check(event)">
+
+</body>
+<script>
+  function check(event) {
+      event.target.value = event.target.value.slice(0, 16);
+  }
+</script>
+</html>
