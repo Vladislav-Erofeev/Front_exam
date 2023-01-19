@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="range" min="100" max="500" step="1" value="0" onmousemove="changeTime(event)">
+<p id="timer">0:0</p>
+<p id="start">Пуск</p>
+
+</body>
+<script>
+  let time;
+  let timer = document.querySelector("#timer")
+  function changeTime(event) {
+    time = event.target.value - 100;
+    timer.innerHTML = `${Math.round(time / 60) }:${Math.round(time % 60) }`;
+  }
+  let start = document.querySelector("#start");
+  start.addEventListener("click", () => {
+    if(time <= 0) {
+      return;
+    }
+    let inter = setInterval((event) => {
+      time -= 1;
+      if(time == 0) {
+        alert("TIme!");
+        timer.innerHTML = `0:0`;
+        clearInterval(inter)
+      } else {
+        timer.innerHTML = `${Math.round(time / 60) }:${Math.round(time % 60) }`;
+      }
+    }, 1000)
+  })
+
+</script>
+</html>
