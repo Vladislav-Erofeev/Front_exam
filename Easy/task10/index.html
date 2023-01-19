@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  #block {
+    font-size: 20px;
+  }
+</style>
+<body>
+
+<p id="block">Текст</p>
+
+<p id="bigger">Больше</p>
+<p id="smaller">Меньше</p>
+
+</body>
+<script>
+  let text = document.querySelector("#block")
+  document.querySelector("#bigger").addEventListener("click", () => {
+    let size = parseInt(window.getComputedStyle(text).fontSize)
+    text.style.fontSize = `${size + 5}px`;
+  })
+  document.querySelector("#smaller").addEventListener("click", () => {
+    let size = parseInt(window.getComputedStyle(text).fontSize)
+    text.style.fontSize = `${size - 5}px`;
+  })
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<label>
+  <input type="checkbox" id="green_check" onclick="change(`green`)">
+  Зелёный
+</label>
+
+<label>
+  <input type="checkbox" id="blue_check" onclick="change(`blue`)">
+  Синий
+</label>
+
+<label>
+  <input type="checkbox" id="red_check" onclick="change(`red`)">
+  Красный
+</label>
+
+<label>
+  <input type="checkbox" id="yellow_check" onclick="change(`yellow`)">
+  Жёлтый
+</label>
+
+<label>
+  <input type="checkbox" id="white_check" onclick="change(`white`)">
+  Белый
+</label>
+
+
+
+</body>
+
+<script>
+  function change(color) {
+    document.body.style.backgroundColor = color;
+  }
+</script>
+</html>

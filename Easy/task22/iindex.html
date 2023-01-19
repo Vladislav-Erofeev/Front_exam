@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas width="1000" height="1000"></canvas>
+
+</body>
+<script>
+  let area = document.querySelector("canvas");
+  let ct = area.getContext("2d");
+
+  ct.beginPath();
+  ct.arc(500, 300, 100, 0, 2 * Math.PI, true);
+  ct.stroke()
+
+  ct.font = "30px Arial";
+  ct.fillText("Ерофеев ВС", 100,100);
+</script>
+</html>

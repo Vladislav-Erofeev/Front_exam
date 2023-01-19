@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  @keyframes animation {
+    from {
+      width: 100px;
+      height: 100px;
+    }
+
+    to {
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  @keyframes animation_rev {
+    from {
+      width: 500px;
+      height: 500px;
+    }
+
+    to {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+
+    animation-name: animation_rev;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+  }
+
+  div:active{
+    animation-name: animation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+</style>
+<body>
+
+<div>
+
+</div>
+
+</body>
+</html>
