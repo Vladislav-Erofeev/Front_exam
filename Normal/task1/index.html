@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(100, 200, 50);
+  }
+</style>
+<body>
+
+<div></div>
+
+</body>
+<script>
+  let block = document.querySelector("div");
+  function randomColor() {
+    return Math.round(Math.random() * 255);
+  }
+  block.addEventListener("click", (event) => {
+    event.target.style.backgroundColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+  })
+</script>
+</html>
