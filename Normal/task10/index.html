@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  function randomColor() {
+    return Math.round(Math.random() * 255);
+  }
+  setInterval(() => {
+    document.body.style.backgroundColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+  }, 5000)
+</script>
+</html>
