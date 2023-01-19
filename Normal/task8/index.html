@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<label>
+  <p>
+  Число 1:
+  <input type="text" id="number1">
+
+</label>
+<label>
+  <p>
+  Число 2:
+  <input type="text" id="number2">
+  </p>
+</label>
+<button onclick="calculate()">Вычислить</button>
+
+</body>
+<script>
+  function calculate() {
+    alert(parseInt(document.querySelector("#number1").value) + parseInt(document.querySelector("#number2").value));
+    document.querySelector("#number1").value = "";
+    document.querySelector("#number2").value = "";
+  }
+</script>
+</html>
