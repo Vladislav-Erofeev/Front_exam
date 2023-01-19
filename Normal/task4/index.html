@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="password" id="password" placeholder="Введите пароль">
+<button id="btn">Отправить</button>
+
+</body>
+<script>
+  let area = document.querySelector("#password");
+  document.querySelector("#btn").addEventListener("click", () => {
+    let password = area.value;
+    if(password.length >= 8 && password.length <= 16) {
+      area.style.backgroundColor = "white";
+      area.value = "";
+    } else {
+      area.style.backgroundColor = "red";
+      area.value = "";
+    }
+  })
+</script>
+</html>
