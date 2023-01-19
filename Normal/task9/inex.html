@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>
+  <p>10 + 2: </p>
+  <input type="text">
+</label>
+
+<label>
+  <p>11 + 2: </p>
+  <input type="text">
+</label>
+
+<label>
+  <p>12 + 2: </p>
+  <input type="text">
+</label>
+
+<label>
+  <p>10 + 1: </p>
+  <input type="text">
+</label>
+
+<label>
+  <p>13 + 1: </p>
+  <input type="text">
+</label>
+<button onclick="check()">Проверить</button>
+</body>
+<script>
+  let answers = [12, 13,14, 11, 14];
+  function check() {
+    let userAnswers = document.querySelectorAll("input");
+    for(let i = 0; i < userAnswers.length; i++) {
+      if(userAnswers[i].value == answers[i]) {
+        userAnswers[i].style.backgroundColor = "green";
+      } else {
+        userAnswers[i].style.backgroundColor = "red";
+      }
+    }
+    document.querySelector("button").setAttribute("disabled", "true")
+  }
+</script>
+</html>
