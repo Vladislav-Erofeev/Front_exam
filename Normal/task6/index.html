@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p onclick="setMin()">min</p>
+<meter value="50" min="0" max="100"></meter>
+<p onclick="setMax()">max</p>
+
+</body>
+<script>
+  let meter = document.querySelector("meter");
+
+  let count = 50;
+  function setMin() {
+    let time = setInterval(() => {
+      count -= 1;
+      if(count <= 0) {
+        clearInterval(time);
+        return;
+      }
+      meter.setAttribute("value", count);
+    }, 10)
+  }
+
+  function setMax() {
+    let time = setInterval(() => {
+      count += 1;
+      if(count >= 100) {
+        clearInterval(time);
+        return;
+      }
+      meter.setAttribute("value", count);
+    }, 10)
+  }
+</script>
+</html>
