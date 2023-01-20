@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas width="400" height="200"></canvas>
+
+</body>
+<script>
+  let canvas = document.querySelector("canvas");
+  let ctx = canvas.getContext("2d");
+  let symbols = "QWERTYUIOPASDFGHJKLZXCVBNM123456789qwertyuiopasdfghjklzxcvbnm";
+
+  function randomColor() {
+    return `rgb(${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)})`;
+  }
+
+  function generateBackground() {
+    for(let i = 0; i < 100; i++) {
+      ctx.beginPath();
+      ctx.arc(Math.floor(Math.random() * 400), Math.floor(Math.random() * 200), Math.floor(Math.random() * 100), 0, 2*Math.PI);
+      ctx.fillStyle = randomColor();
+      ctx.fill();
+    }
+  }
+
+  function generateCaptch() {
+    let text = "";
+    for(let i = 0 ; i < 6; i++) {
+      text += symbols[Math.floor(Math.random() * symbols.length)];
+    }
+    return text;
+  }
+
+  generateBackground();
+  ctx.font = "60px Arial";
+  ctx.fillStyle = "black"
+  ctx.fillText(generateCaptch(), 90, 120);
+</script>
+</html>
