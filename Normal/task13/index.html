@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  div {
+    position: relative;
+    font-size: 50pt;
+    width: 300px;
+  }
+
+  div::before {
+    content: "Loading...";
+    position: absolute;
+    top:0;
+    left: 0;
+    color: #7b00ff;
+    width: 0%;
+    overflow: hidden;
+    animation: draw 5s ease-in-out forwards;
+  }
+
+  div::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: #7b00ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: move 5s ease-in-out forwards;
+  }
+
+  @keyframes draw {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes move {
+    from {
+      left: 0;
+    }
+    to {
+      left: 95%;
+    }
+  }
+</style>
+<body>
+
+<div>
+  Loading...
+</div>
+
+</body>
+</html>
