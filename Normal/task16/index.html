@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  #clock {
+    width: 300px;
+    height: 300px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 400px;
+    position: relative;
+  }
+
+  #clock:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top:50%;
+    width: 47%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: black;
+    transform-origin: left;
+    left: 50%;
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+<body>
+
+<div id="clock"></div>
+
+</body>
+</html>
