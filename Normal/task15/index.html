@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  #ball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #7b00ff;
+    border-radius: 30px;
+    transition: 0.2s ease-out;
+  }
+</style>
+<body>
+
+<div id="ball"></div>
+
+</body>
+<script>
+  let circle = document.querySelector("#ball");
+  document.addEventListener("mousemove", (event) => {
+    circle.style.left = `${event.clientX - 25}px`;
+    circle.style.top = `${event.clientY - 25}px`;
+  })
+</script>
+</html>
